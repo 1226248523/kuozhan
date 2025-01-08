@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>操作记录器</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #recordsDisplay {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      overflow-y: auto;
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <select id="tabSelect"></select> 
+  <button id="screenshotBtn">Take Screenshot</button>
+  <button id="downloadBtn">Download Records</button>
+  <button id="getRecordsBtn">Display Records</button>
+  <div id="recordsDisplay"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+  {
+    "manifest_version": 3,
+    "name": "网页操作记录器",
+    "version": "1.0",
+    "description": "记录用户在网页上的操作并保存为CSV文件。",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "downloads",
+      "storage",
+      "clipboardRead",
+      "clipboardWrite"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
